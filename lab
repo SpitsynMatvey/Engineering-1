@@ -1,0 +1,7 @@
+import numpy as np
+from scipy.optimize import fsolve
+def y(p):
+  x,y=p
+  return(x**2+y*x-10,x*y+y**2+np.sin(x)+7)
+x,y=fsolve(y,(1,0))   
+print(x,y)
